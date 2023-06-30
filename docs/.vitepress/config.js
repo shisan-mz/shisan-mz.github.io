@@ -43,9 +43,7 @@ module.exports = {
             ),
             "/web/rust": autoGetSidebarOptionBySrcDir(
                 path.resolve(__dirname, "../web/rust"),
-            ).concat(autoGetSidebarOptionBySrcDir(
-                path.resolve(__dirname, "../web/rustweb"),
-            )),
+            ),
         },
         socialLinks: [{ icon: "github", link: "https://github.com/aiai0603" }],       //右上角的社交标签，支持多种icon，具体可以查询官网，反正没有QQ和微信，放个git差不多意思意思就行了
     }

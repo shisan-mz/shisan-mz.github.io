@@ -17,9 +17,9 @@ git add -A
 git commit -m 'deploy'
 
 # 如果部署到 https://<USERNAME>.github.io
-git push -f orgin master
-
-# 如果是部署到 https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:Libaizhu/Libaizhu.github.io.git master
+git push -f git@github.com:Libaizhu/Libaizhu.github.io.git master  
 
 cd -
+
+# 删除dist文件夹
+rm -rf docs/.vitepress/dist
