@@ -10,6 +10,7 @@ module.exports = {
         ['link', { rel: 'icon', href: '/vite.svg', type: 'image/svg+xml' }]
     ],
     themeConfig: {
+        lastUpdated: '上次更新',
         search: {
             provider: 'local'
         },
