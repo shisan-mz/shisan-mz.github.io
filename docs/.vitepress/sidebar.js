@@ -1,4 +1,3 @@
-const path = require("path");
 const dirTree = require("directory-tree");
 
 function toSidebarOption(tree = []) {
