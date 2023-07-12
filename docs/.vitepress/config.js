@@ -14,7 +14,7 @@ module.exports = {
         search: {
             provider: 'local'
         },
-        siteTitle: "低级前端实习生",  //左上角的
+        siteTitle: "米斯特李",  //左上角的
         logo: "/logo.jpg",      //左上角的logo,注意：它的路径是从public文件夹开始的，所以这里引用的是public/logo.jpg这张图
         nav: [                  //右上角的导航栏
             {
@@ -24,7 +24,7 @@ module.exports = {
                     { text: "小程序", link: "/web/小程序/01.基础入门" },     //text代表每一项的名字，link是连接的位置
                     { text: "Vue", link: "/web/Vue/01.vue" },
                     { text: "React", link: "/web/React/01.react" },
-                    { text: "Electron", link: "/web/Electron/01.electron" },
+                    { text: "Electron", link: "/web/Electron/01.使用Vite+Electron构建Vue项目" },
                     { text: "Git", link: "/web/Git/01.git常用命令" },
                 ],
             },
