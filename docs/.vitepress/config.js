@@ -20,7 +20,7 @@ module.exports = {
             {
                 text: "学习",             //导航标签的名字
                 items: [                  //这种格式是有下拉菜单的版本
-                    { text: "基础", link: "/web/基础/HTML/01.HTML" }, 
+                    { text: "基础", link: "/web/基础/HTML/01.HTML5之Dialog标签" }, 
                     { text: "小程序", link: "/web/小程序/01.基础入门" },     //text代表每一项的名字，link是连接的位置
                     { text: "Vue", link: "/web/Vue/01.vue" },
                     { text: "React", link: "/web/React/01.react" },
