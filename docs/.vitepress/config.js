@@ -62,7 +62,11 @@ module.exports = {
             ).concat(autoGetSidebarOptionBySrcDir(
                 path.resolve(__dirname, "../web/Electron-builder"),
                 "Electron-builder"
-            )),
+            )).concat(autoGetSidebarOptionBySrcDir(
+                path.resolve(__dirname, "../web/Electron-其他"),
+                "Electron-其他"
+            ))
+            ,
             "/web/Git": autoGetSidebarOptionBySrcDir(
                 path.resolve(__dirname, "../web/Git"),
                 "Git"
