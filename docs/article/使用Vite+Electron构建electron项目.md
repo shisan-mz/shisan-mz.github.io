@@ -1,8 +1,8 @@
 ---
-title: Vite+Electron构建Vue项目
+title: Vite+Electron构建Electron项目
 ---
 
-# Vite+Electron构建Vue项目
+# Vite+Electron构建Electron项目
 
 [Electron官网](https://www.electronjs.org/zh)
 <br>
@@ -47,7 +47,7 @@ npm i electron@22 -D
 ```js
 // main.js
 const { app, BrowserWindow } = require('electron')
-const {join} = require('node:path')
+const { join } = require('node:path')
 
 let mainWindow = null
 
@@ -62,8 +62,8 @@ function createWindow() {
         }
     })
 
-    // 加载 URL
-    mainWindow.loadURL(join(__dirname, '../dist/index.html'))
+    // 加载 vue项目url
+    mainWindow.loadURL("http://localhost:5173/")
 
     // 打开开发工具
     // mainWindow.webContents.openDevTools()
@@ -95,7 +95,9 @@ app.on('window-all-closed', function () {
 const { contextBridge } = require('electron');
 
 // 用于渲染器的自定义API
-const ipcRendererApi = {}
+const ipcRendererApi = {
+    // 自定义
+}
 // 只有在启用了上下文隔离的情况下，才能使用“contextBridge”API向渲染器公开Electron API，
 // 否则只添加到DOM全局。
 if (process.contextIsolated) {
@@ -133,8 +135,8 @@ export default defineConfig({
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    // 增加启动命令
-    "dev:electron": "npm run build && electron ."
+    // 增加electron启动命令
+    "dev:electron": "chcp 65001 && electron ."
   },
   "dependencies": {
     "vue": "^3.2.37"
@@ -150,6 +152,8 @@ export default defineConfig({
 ## 三、运行启动命令
 
 ```json
+#  打开两个终端,分别运行
+>  npm run dev
 >  npm run dev:electron
 ```
 

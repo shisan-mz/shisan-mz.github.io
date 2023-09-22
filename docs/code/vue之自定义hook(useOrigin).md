@@ -1,9 +1,8 @@
 ---
-title: 自定义hook之useOrigin
+title: vue3自定义hook之useOrigin
 ---
 
-
-# 自定义hook之useOrigin
+# vue3自定义hook之useOrigin
 
 便于重置数据
 

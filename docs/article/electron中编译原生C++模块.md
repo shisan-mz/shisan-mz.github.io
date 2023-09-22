@@ -42,7 +42,7 @@ npm i @electron/rebuild -D
 },
 ```
 
-可以使用`ectron-rebuild`编译项目中所有的原生模块，也可以通过`electron-rebuild -f -w <moduleName>`编译指定的原生模块。
+可以使用`electron-rebuild`编译项目中所有的原生模块，也可以通过`electron-rebuild -f -w <moduleName>`编译指定的原生模块。
 
 5、运行rbuild脚本命令
 

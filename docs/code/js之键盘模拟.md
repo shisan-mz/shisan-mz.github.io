@@ -10,4 +10,4 @@ title: js键盘模拟
     })
     var eventKeyDown = new KeyboardEvent('keydown', { 'key': 'f' });
     document.dispatchEvent(eventKeyDown);
-`
+```
