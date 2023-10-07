@@ -8,25 +8,25 @@ title: 文字加载loading
 ```
 
 ```css
-    .txt::after{
+.txt::after{
+    content: '';
+    animation: load 3s infinite ;
+}
+@keyframes load {
+    0% {
+        content: '...';
+    }
+    25% {
         content: '';
-        animation: load 3s infinite ;
     }
-    @keyframes load {
-        0% {
-            content: '...';
-        }
-        25% {
-            content: '';
-        }
-        50% {
-            content: '.';
-        }
-        75% {
-            content: '..';
-        }
-        100% {
-            content: '...';
-        }
+    50% {
+        content: '.';
     }
+    75% {
+        content: '..';
+    }
+    100% {
+        content: '...';
+    }
+}
 ```

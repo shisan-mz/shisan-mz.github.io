@@ -4,6 +4,7 @@ title: WebScoket使用
 
 # WebScoket使用
 
+客户端
 ```js
 //webscoket
 let socket
@@ -50,4 +51,36 @@ const socketConnect = () => {
         socketLock = false
     }, 5 * 1000);
 }
+```
+服务端
+```js
+const WebSocket = require('ws');
+const wss = new WebSocket.Server({ port: 3001 });
+
+wss.on('connection', function connection(ws) {
+    console.log('连接成功');
+    // 收到消息
+    ws.on('message',function(message){
+        let str = message.toString('utf-8');
+        console.log('Received message: ' + str);
+    })
+    // 发生错误
+    ws.on('error',function(err){
+        console.error(err);
+    })
+    // 连接成功通知
+    ws.send(JSON.stringify('Hello, client!'))
+    // 模拟实时更新数据
+    setInterval(() => {
+        let list = [];
+        for (let i = 0; i < 12; i++) {
+            let randomNum = Math.floor(Math.random() * 100);
+            list.push(randomNum);
+        }
+        ws.send(JSON.stringify(list))
+    }, 10000)
+});
+wss.on('close',function(){
+    console.log('close');
+})
 ```
