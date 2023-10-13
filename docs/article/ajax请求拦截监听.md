@@ -8,7 +8,6 @@ title: ajax请求拦截监听
 /**
  * xhr_proxy.js
  * 通过劫持原生XMLHttpRequest实现对页面ajax请求的监听
- * @author binaryfire
  */
 const READY_STATE_CHANGE = 'readystatechange';
 let gHandlerList = [],//截获请求的处理函数列表
