@@ -29,9 +29,21 @@ title: git 常用命令
 # 推送到远程分支
 > git push dev
 
+# 拉取
+> git pull
+
+# 拉取指定分支代码
+> git pull origin <branch-name>
+
 # 合并dev分支到master
 > git checkout master
 > git merge dev
+
+# 取消合并分支(合并未提交)
+> git merge --abort
+
+# 取消合并分支(合并后已经提交)
+> git revert
 
 # 删除远程仓库分支
 > git push origin --delete <branch-name>
