@@ -48,5 +48,15 @@ title: git 常用命令
 # 删除远程仓库分支
 > git push origin --delete <branch-name>
 
+# 删除远程仓库中的文件（夹）
+1. 预览想要删除的文件
+命令：git rm -r -n --cached 文件/文件夹名称
+由于增加了参数 -n，此时只是预览涉及的文件，不会真正删除
+
+2. 执行删除操作
+命令：git rm -r --cached 文件/文件夹名称
+--删除后，编辑.gitignore进行忽略或者本地文件不需要彻底删除
+
+3. 将删除操作提交至远程仓库（commit，push）
 
 ```
