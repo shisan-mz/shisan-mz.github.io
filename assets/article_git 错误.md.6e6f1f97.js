@@ -1,0 +1,34 @@
+import{_ as s,o as a,c as n,V as t}from"./chunks/framework.5a3bb230.js";const u=JSON.parse('{"title":"git 错误","description":"","frontmatter":{"title":"git 错误"},"headers":[],"relativePath":"article/git 错误.md","filePath":"article/git 错误.md"}'),o={name:"article/git 错误.md"},e=t(`<h1 id="git-错误" tabindex="-1">git 错误 <a class="header-anchor" href="#git-错误" aria-label="Permalink to &quot;git 错误&quot;">​</a></h1><h2 id="_1、fatal-unable-to-access-https-github-com-git-could-not-resolve-host-github-com" tabindex="-1">1、fatal:unable to access &#39;<a href="https://github.com/.../.git" target="_blank" rel="noreferrer">https://github.com/.../.git</a>&#39;:Could not resolve host:github.com <a class="header-anchor" href="#_1、fatal-unable-to-access-https-github-com-git-could-not-resolve-host-github-com" aria-label="Permalink to &quot;1、fatal:unable to access &#39;https://github.com/.../.git&#39;:Could not resolve host:github.com&quot;">​</a></h2><div class="language-json"><button title="Copy Code" class="copy"></button><span class="lang">json</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;"># 查看是否使用代理</span></span>
+<span class="line"><span style="color:#A6ACCD;">&gt; git config --global http.proxy</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;"># 取消代理</span></span>
+<span class="line"><span style="color:#A6ACCD;">&gt; git config --global --unset http.proxy</span></span>
+<span class="line"><span style="color:#A6ACCD;">&gt; git config --global --unset https.proxy</span></span></code></pre></div><h2 id="_2、the-authenticity-of-host-github-com-20-205-243-166-can-t-be-established" tabindex="-1">2、The authenticity of host &#39;github.com (20.205.243.166)&#39; can&#39;t be established. <a class="header-anchor" href="#_2、the-authenticity-of-host-github-com-20-205-243-166-can-t-be-established" aria-label="Permalink to &quot;2、The authenticity of host &#39;github.com (20.205.243.166)&#39; can&#39;t be established.&quot;">​</a></h2><p>RSA key fingerprint is SHA256:xxxxxxxxxxxxxxxxxx. This key is not known by any other names Are you sure you want to continue connecting (yes/no/[fingerprint])?</p><div class="language-json"><button title="Copy Code" class="copy"></button><span class="lang">json</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">输入yes再回车</span></span></code></pre></div><h2 id="_3、warning-permanently-added-github-com-ed25519-to-the-list-of-known-hosts-git-github-com" tabindex="-1">3、Warning: Permanently added ‘github.com’ (ED25519) to the list of known hosts. <a href="mailto:git@github.com" target="_blank" rel="noreferrer">git@github.com</a> <a class="header-anchor" href="#_3、warning-permanently-added-github-com-ed25519-to-the-list-of-known-hosts-git-github-com" aria-label="Permalink to &quot;3、Warning: Permanently added ‘github.com’ (ED25519) to the list of known hosts. git@github.com&quot;">​</a></h2><p>GitHub SSH秘钥不对</p><div class="language-json"><button title="Copy Code" class="copy"></button><span class="lang">json</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;"># </span><span style="color:#F78C6C;">1</span><span style="color:#A6ACCD;">、检查本地是否有id_rsa、id_rsa.pub密匙</span></span>
+<span class="line"><span style="color:#A6ACCD;">&gt; ls ~/.ssh</span></span>
+<span class="line"><span style="color:#A6ACCD;">known_hosts</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;"># </span><span style="color:#F78C6C;">2</span><span style="color:#A6ACCD;">、生成新秘钥(任意邮箱，一路回车)</span></span>
+<span class="line"><span style="color:#A6ACCD;">&gt; ssh-keygen -t rsa -C </span><span style="color:#89DDFF;">&quot;</span><span style="color:#C3E88D;">xxx@xxx.com</span><span style="color:#89DDFF;">&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;"># </span><span style="color:#F78C6C;">3</span><span style="color:#A6ACCD;">、检查生成的秘钥</span></span>
+<span class="line"><span style="color:#A6ACCD;">&gt; ls ~/.ssh</span></span>
+<span class="line"><span style="color:#A6ACCD;">id_rsa          id_rsa.pub      known_hosts</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;"># </span><span style="color:#F78C6C;">4</span><span style="color:#A6ACCD;">、查看公钥</span></span>
+<span class="line"><span style="color:#A6ACCD;">&gt; cat ~/.ssh/id_rsa.pub</span></span>
+<span class="line"><span style="color:#A6ACCD;">ssh-rsa AAgPdBcQ... xx@gmail.com</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;"># </span><span style="color:#F78C6C;">5</span><span style="color:#A6ACCD;">、GitHub上配置SSH keys</span></span>
+<span class="line"><span style="color:#A6ACCD;">个人设置settings --&gt; SSH and GPG keys --&gt;new SSH keys ---&gt; (title随意)</span></span></code></pre></div><h2 id="_4、repository-not-found。fatal-could-not-read-from-remote-repository" tabindex="-1">4、Repository not found。fatal: Could not read from remote repository <a class="header-anchor" href="#_4、repository-not-found。fatal-could-not-read-from-remote-repository" aria-label="Permalink to &quot;4、Repository not found。fatal: Could not read from remote repository&quot;">​</a></h2><div class="language-json"><button title="Copy Code" class="copy"></button><span class="lang">json</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;"># </span><span style="color:#F78C6C;">1</span><span style="color:#A6ACCD;">、查看本地是否有ssh</span></span>
+<span class="line"><span style="color:#A6ACCD;">&gt; ls ~/.ssh</span></span>
+<span class="line"><span style="color:#A6ACCD;">id_rsa          id_rsa.pub      known_hosts</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;"># </span><span style="color:#F78C6C;">2</span><span style="color:#A6ACCD;">、产看并公钥添加到github</span></span>
+<span class="line"><span style="color:#A6ACCD;">&gt; cat ~/.ssh/id_rsa.pub</span></span>
+<span class="line"><span style="color:#A6ACCD;">ssh-rsa AAgPdBcQ... xx@gmail.com</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;"># </span><span style="color:#F78C6C;">3</span><span style="color:#A6ACCD;">、查看公钥是否有误(无误结果如下)</span></span>
+<span class="line"><span style="color:#A6ACCD;">&gt; ssh -T git@github.com</span></span>
+<span class="line"><span style="color:#A6ACCD;">Hi xxxx! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;"># </span><span style="color:#F78C6C;">4</span><span style="color:#A6ACCD;">、确认仓库路径</span></span></code></pre></div>`,11),l=[e];function p(i,c,r,h,C,g){return a(),n("div",null,l)}const y=s(o,[["render",p]]);export{u as __pageData,y as default};
