@@ -9,15 +9,16 @@ title: js视频截帧
 * 视频截帧(web端需使用 URL.createObjectURL 将文件转成本地临时url,electron使用需要关闭webSecurity)
 * @param {string} filePath 视频文件路径
 * @param {string} fileName 视频文件名称
-* @param {number} time 截取帧的时间
+* @param {number} time 截取帧的时间，截取帧的时间(测试截帧时间超过55秒后生成透明图)
 * @return {Promise}
 */
 function captureFrame(filePath, fileName, time = 1) {
     console.log(filePath, fileName, time);
     return new Promise((resolve, reject) => {
+        video标签，使用ev录制的mp4，截帧结果是透明图？？？
         const video = document.createElement('video')
         video.crossorigin = "anonymous"
-        // video.src = `file:///${filePath}`    // electron使用
+        // video.src = `file:///${filePath}`    // electron使用，当typeof window === 'undefined'
         video.src = `${filePath}`  // web端使用
         video.onloadedmetadata = () => {
             video.currentTime = time

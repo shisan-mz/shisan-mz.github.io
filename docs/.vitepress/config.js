@@ -18,33 +18,17 @@ module.exports = {
         logo: "/logo.jpg",          //左上角的logo,注意：路径从public文件夹开始
         nav: [                      //右上角的导航栏
             { text: '首页', link: '/' },
-            { text: '随笔', link: '/article/asar文件' },
-            { text: '代码片段', link: '/code/css之抖动' },
-            { text: '工具软件', link: '/tools/Visual Studio Code' },
-            { text: '插件扩展', link: '/plugin/axios使用' },
+            { text: '笔记', link: '/article/page' },
+            { text: '代码片段', link: '/code/page' },
+            // { text: '工具软件', link: '/tools/page' },
+            { text: '插件扩展', link: '/plugin/page' },
         ],
         sidebar: {
-            '/article': [
-                {
-                    items: autoGetSidebarOptionBySrcDir(resolve(__dirname, '../article'))
-                }
-            ],
-            '/code': [
-                {
-                    items: autoGetSidebarOptionBySrcDir(resolve(__dirname, '../code'))
-                }
-            ],
-            '/tools': [
-                {
-                    items: autoGetSidebarOptionBySrcDir(resolve(__dirname, '../tools'))
-                }
-            ],
-            '/plugin': [
-                {
-                    items: autoGetSidebarOptionBySrcDir(resolve(__dirname, '../plugin'))
-                }
-            ]
+            '/article': autoGetSidebarOptionBySrcDir(resolve(__dirname, '../article')),
+            '/code': autoGetSidebarOptionBySrcDir(resolve(__dirname, '../code')),
+            // '/tools': autoGetSidebarOptionBySrcDir(resolve(__dirname, '../tools')),
+            '/plugin': autoGetSidebarOptionBySrcDir(resolve(__dirname, '../plugin')),
         },
-        socialLinks: [{ icon: "github", link: "https://github.com/Libaizhu" }],       //右上角的社交标签
+        socialLinks: [{ icon: "github", link: "https://github.com/shisan-mz" }],       //右上角的社交标签
     }
 }
