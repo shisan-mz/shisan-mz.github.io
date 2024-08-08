@@ -1,0 +1,92 @@
+---
+title: css呼吸渐变背景
+---
+
+# css呼吸渐变背景
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-color: rgb(240, 240, 240);
+        }
+
+        .div {
+            width: 100%;
+            height: 100%;
+            white-space: nowrap;
+            /* 3秒完成一次呼吸动画，无限循环 */
+            animation: breathe 30s infinite;
+        }
+
+        @keyframes breathe {
+            0% {
+                background-color: skyblue;
+            }
+
+            10% {
+                background-color: aliceblue;
+            }
+
+            20% {
+                background-color: azure;
+            }
+
+            30% {
+                background-color: bisque;
+            }
+
+            40% {
+                background-color: aliceblue;
+            }
+
+            50% {
+                background-color: rgb(182, 184, 185);
+            }
+
+            60% {
+                background-color: rgb(126, 127, 128);
+            }
+
+            70% {
+                background-color: aquamarine
+            }
+
+            80% {
+                background-color: aliceblue;
+            }
+
+            90% {
+                background-color: bisque;
+            }
+
+            100% {
+                background-color: skyblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+</body>
+
+</html>
+
+```

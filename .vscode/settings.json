@@ -1,0 +1,43 @@
+{
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.guides.bracketPairs": "active",
+    "workbench.list.smoothScrolling": true,
+    "workbench.tree.indent": 10,
+    // ========== 主题 dark ========== 
+    "workbench.colorTheme": "NarutoDark",
+    // ========== 字体 ========== 
+    "editor.fontFamily": "'Fira Code'",
+    // ========== 连字符 ========== 
+    "editor.fontLigatures": true,
+    // ========== Editor ========== 
+    "editor.inlineSuggest.enabled": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.fontWeight": "500",
+    "search.exclude": {
+        "**/*.snap": true,
+        "**/*.svg": true,
+        "**/.git": true,
+        "**/.github": false,
+        "**/.nuxt": true,
+        "**/.output": true,
+        "**/.pnpm": true,
+        "**/.vscode": true,
+        "**/.yarn": true,
+        "**/assets": true,
+        "**/bower_components": true,
+        "**/dist/**": true,
+        "**/logs": true,
+        "**/node_modules": true,
+        "**/out/**": true,
+        "**/package-lock.json": true,
+        "**/pnpm-lock.yaml": true,
+        "**/public": true,
+        "**/temp": true,
+        "**/yarn.lock": true,
+        "**/CHANGELOG*": true,
+        "**/LICENSE*": true,
+    },
+}
