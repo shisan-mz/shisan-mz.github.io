@@ -1,11 +1,7 @@
 # 一、创建并生成dll
 
-ps：dll下载：https://www.lanzouw.com/iROt91ywtjri
-
-1、新建项目
-<br>
-2、选择“动态链接库（DLL）”
-<br>
+1、新建项目  
+2、选择“动态链接库（DLL）”  
 3、配置新项目DLL（注意位置，后续生成dll在该路径下的x64\Debug中）
 
 新创建头文件TestDLL.h,它是作用是用来声明需要导出的函数接口

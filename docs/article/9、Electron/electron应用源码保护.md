@@ -5,16 +5,17 @@
 ## 一、对js文件进行混淆、ASAR文件防解压
 
 ### 1、安装需要使用的依赖
-全局的node-gyp
-```js
-# asarmor在安装2.x及2.x的beta版本，用Visual Studio Installer 2017能正常安装，asarmor 3.x报错(需使用Visual Studio Installer 2019+)
-    npm i -g node-gyp
+```shell
+    npm i -g node-gyp@9
     npm i @electron/asar@3.2.10 asarmor@2.0.0 javascript-obfuscator@4.1.0 chalk@4 -D
     npm i fs-extra
+    # 当前python版本：3.11.3，Visual Studio 2017 
 ```
 
-注:安装asarmor需要本地有Python(安装Python)和C++环境(安装Visual Studio Installer，勾选C++)
-当前python版本：3.10.11，Visual Studio Installer版本：2017
+
+注:安装asarmor需要本地有Python(安装Python)和C++环境(安装Visual Studio，勾选C++)  
+*asarmor在安装2.x版本需要安装Visual Studio 2017，安装asarmor 3.x版本需使用Visual Studio 2019+*
+
 
 Visual studio 生成工具:(Visual Studio Installer)
 <br>
