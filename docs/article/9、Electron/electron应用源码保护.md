@@ -1,4 +1,6 @@
-# electron应用进行源码保护
+---
+title: electron应用进行源码保护
+---
 
 打包工具：electron-builder
 

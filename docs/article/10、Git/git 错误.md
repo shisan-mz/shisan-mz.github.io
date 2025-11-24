@@ -41,7 +41,7 @@ known_hosts
 > ls ~/.ssh
 id_rsa          id_rsa.pub      known_hosts
 
-# 4、查看公钥
+# 4、查看公钥并复制
 > cat ~/.ssh/id_rsa.pub
 ssh-rsa AAgPdBcQ... xx@gmail.com
 

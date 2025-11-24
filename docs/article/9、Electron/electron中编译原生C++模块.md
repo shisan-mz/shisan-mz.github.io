@@ -17,8 +17,11 @@ VisualStudio安装注意
 ![VisualStudio](/img/VisualStudio.png)
 (1)勾选C++生成工具，以及右侧三项
 (2)设置npm在 Windows 平台上使用的 Visual Studio 编译工具的版本
-```
+```shell
 npm config set msvs_version 2017
+# 或者手动前往.npmrc文件设置
+registry=https://registry.npmmirror.com/
+msvs_version=2017	# 指定使用的 Visual Studio 版本
 ```
 
 2、安装全局依赖node-gyp（使用管理员命令安装）

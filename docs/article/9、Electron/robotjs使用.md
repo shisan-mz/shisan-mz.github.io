@@ -1,4 +1,6 @@
-robotjs在electron中使用
+---
+title: robotjs在electron中使用
+---
 
 robotjs官网：https://robotjs.io/
 # 一、安装robotjs
@@ -25,7 +27,7 @@ the module (for instance, using `npm rebuild` or `npm install`).
     at Object.<anonymous> (D:\work\test\electron-vite-test\node_modules\robotjs\index.js:1:15)
     at Module._compile (node:internal/modules/cjs/loader:1271:14)
 ```
-注：编译需要的环境（node-gyp 10.1.0、python 3.11.3、Visual Studio Installer 2022（Visual Studio 生成工具））
+注：编译需要的环境（node-gyp 11.5.0、python 3.11.3、Visual Studio Installer 2022（Visual Studio 生成工具））
 
 1、全局安装node-gyp
 ```json
